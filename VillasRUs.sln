@@ -5,8 +5,6 @@ VisualStudioVersion = 17.6.33927.249
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6BB5A7EE-7085-4618-ABE7-547662D9FACF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D6064419-CFF5-4D7B-BA09-1D35185818A7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{977CF887-2816-46C2-8AE1-2BAA222A4F81}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -14,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VillasRUs.Domain", "src\VillasRUs.Domain\VillasRUs.Domain.csproj", "{78BB84E4-9149-4FCF-AECA-73B34E53CBAF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{010CB4BB-1D0D-400A-AB1A-273FC506220B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,4 +1,4 @@
-﻿namespace VillasRUs.Domain.Villas
+﻿namespace VillasRUs.Domain.Shared
 {
     public record Currency
     {

@@ -1,4 +1,5 @@
 ﻿using VillasRUs.Domain.Abstractions;
+using VillasRUs.Domain.Shared;
 
 namespace VillasRUs.Domain.Villas
 {
