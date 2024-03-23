@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VillasRUs.Domain", "src\Vil
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{010CB4BB-1D0D-400A-AB1A-273FC506220B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillasRUs.Application", "VillasRUs.Application\VillasRUs.Application.csproj", "{F5D479C7-049B-4DE0-BCDA-128BE43E7B30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{78BB84E4-9149-4FCF-AECA-73B34E53CBAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78BB84E4-9149-4FCF-AECA-73B34E53CBAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78BB84E4-9149-4FCF-AECA-73B34E53CBAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D479C7-049B-4DE0-BCDA-128BE43E7B30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D479C7-049B-4DE0-BCDA-128BE43E7B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D479C7-049B-4DE0-BCDA-128BE43E7B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D479C7-049B-4DE0-BCDA-128BE43E7B30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{78BB84E4-9149-4FCF-AECA-73B34E53CBAF} = {6BB5A7EE-7085-4618-ABE7-547662D9FACF}
+		{F5D479C7-049B-4DE0-BCDA-128BE43E7B30} = {6BB5A7EE-7085-4618-ABE7-547662D9FACF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C7FC56AC-5C91-48CF-B7F7-7A49BA7E78CB}
