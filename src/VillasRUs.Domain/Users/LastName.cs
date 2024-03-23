@@ -1,4 +1,3 @@
-﻿namespace VillasRUs.Domain.Users
-{
-    public record LastName(string Value);
-}
+﻿namespace VillasRUs.Domain.Users;
+
+public record LastName(string Value);

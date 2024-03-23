@@ -1,8 +1,7 @@
 ﻿using MediatR;
 
-namespace VillasRUs.Domain.Abstractions
+namespace VillasRUs.Domain.Abstractions;
+
+public interface IDomainEvent : INotification
 {
-    public interface IDomainEvent : INotification
-    {
-    }
 }

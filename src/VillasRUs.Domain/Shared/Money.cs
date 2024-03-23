@@ -1,30 +1,29 @@
-﻿namespace VillasRUs.Domain.Shared
+﻿namespace VillasRUs.Domain.Shared;
+
+public record Money(decimal Amount, Currency Currency)
 {
-    public record Money(decimal Amount, Currency Currency)
+    public static Money operator +(Money first, Money second)
     {
-        public static Money operator +(Money first, Money second)
+        if (first.Currency != second.Currency)
         {
-            if (first.Currency != second.Currency)
-            {
-                throw new InvalidOperationException("Currencies must be the same");
-            }
-
-            return new Money(first.Amount + second.Amount, first.Currency);
+            throw new InvalidOperationException("Currencies must be the same");
         }
 
-        public static Money Zero()
-        {
-            return new(0, Currency.None);
-        }
+        return new Money(first.Amount + second.Amount, first.Currency);
+    }
 
-        public static Money Zero(Currency currency)
-        {
-            return new(0, currency);
-        }
+    public static Money Zero()
+    {
+        return new(0, Currency.None);
+    }
 
-        public bool IsZero()
-        {
-            return this == Zero();
-        }
+    public static Money Zero(Currency currency)
+    {
+        return new(0, currency);
+    }
+
+    public bool IsZero()
+    {
+        return this == Zero();
     }
 }

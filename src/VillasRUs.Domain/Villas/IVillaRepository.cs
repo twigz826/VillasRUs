@@ -1,7 +1,6 @@
-﻿namespace VillasRUs.Domain.Villas
+﻿namespace VillasRUs.Domain.Villas;
+
+public interface IVillaRepository
 {
-    public interface IVillaRepository
-    {
-        Task<Villa> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
-    }
+    Task<Villa> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 }
