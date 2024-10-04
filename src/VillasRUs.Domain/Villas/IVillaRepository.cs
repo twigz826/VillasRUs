@@ -2,5 +2,5 @@
 
 public interface IVillaRepository
 {
-    Task<Villa> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
+    Task<Villa?> GetByIdAsync(Guid id, CancellationToken cancellationToken = default);
 }

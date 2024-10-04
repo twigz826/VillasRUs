@@ -1,5 +1,6 @@
 ﻿using VillasRUs.Application.Abstractions.Clock;
 using VillasRUs.Application.Abstractions.Messaging;
+using VillasRUs.Application.Exceptions;
 using VillasRUs.Domain.Abstractions;
 using VillasRUs.Domain.Bookings;
 using VillasRUs.Domain.Users;
@@ -48,10 +49,17 @@ internal sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBook
             return Result.Failure<Guid>(BookingErrors.Overlap);
         }
 
-        var booking = Booking.Reserve(villa, user.Id, duration, _dateTimeProvider.UtcNow, _pricingService);
-        _bookingRepository.Add(booking);
+        try
+        {
+            var booking = Booking.Reserve(villa, user.Id, duration, _dateTimeProvider.UtcNow, _pricingService);
+            _bookingRepository.Add(booking);
 
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
-        return booking.Id;
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+            return booking.Id;
+        }
+        catch (ConcurrencyException ex)
+        {
+            return Result.Failure<Guid>(BookingErrors.Overlap);
+        }
     }
 }

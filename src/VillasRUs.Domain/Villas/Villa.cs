@@ -26,6 +26,7 @@ public sealed class Villa : Entity
     public Money CleaningFee { get; private set; }
 
     public DateTime? LastBookedOnUtc { get; internal set; }
+    //This has an internal setter so that we can update the value from within the domain project
 
     public List<Amenity> Amenities { get; private set; } = new();
 }

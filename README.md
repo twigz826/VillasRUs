@@ -4,5 +4,4 @@ VillasRUs is a platform where users can rent villas. The project is built using 
 # Getting Started
 
 ## Installation process
-
 To be completed after further development work.

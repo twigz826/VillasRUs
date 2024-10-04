@@ -3,6 +3,7 @@ using VillasRUs.Domain.Bookings;
 using VillasRUs.Domain.Reviews.Events;
 
 namespace VillasRUs.Domain.Reviews;
+
 public sealed class Review : Entity
 {
     private Review(Guid id, Guid villaId, Guid bookingId, Guid userId, Rating rating, Comment comment, DateTime createdOnUtc)
