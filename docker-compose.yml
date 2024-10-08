@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  villasrus.api:
+    image: ${DOCKER_REGISTRY-}villasrusapi
+    build:
+      context: .
+      dockerfile: VillasRUs.Api/Dockerfile
+    depends_on:
+      - villasrus-db
+
+  villasrus-db:
+    image: postgres:latest
+    container_name: VillasRUs.Db
+    environment:
+      - POSTGRES_DB=villasrus
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  pgdata:
+
+
