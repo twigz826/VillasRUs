@@ -17,6 +17,10 @@ public sealed class Review : Entity
         CreatedOnUtc = createdOnUtc;
     }
 
+    private Review()
+    {
+    }
+
     public Guid VillaId { get; private set; }
 
     public Guid BookingId { get; private set; }

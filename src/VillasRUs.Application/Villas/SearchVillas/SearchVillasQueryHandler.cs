@@ -9,11 +9,11 @@ namespace VillasRUs.Application.Villas.SearchVillas;
 internal sealed class SearchVillasQueryHandler : IQueryHandler<SearchVillasQuery, IReadOnlyList<VillaResponse>>
 {
     private static readonly int[] ActiveBookingStatuses =
-    {
+    [
         (int)BookingStatus.Reserved,
         (int)BookingStatus.Confirmed,
         (int)BookingStatus.Completed,
-    };
+    ];
 
     private readonly ISqlConnectionFactory _sqlConnectionFactory;
 

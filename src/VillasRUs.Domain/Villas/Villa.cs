@@ -15,6 +15,10 @@ public sealed class Villa : Entity
         Amenities = amenities;
     }
 
+    private Villa()
+    {
+    }
+
     public Name Name { get; private set; }
 
     public Description Description { get; private set; }
@@ -28,5 +32,5 @@ public sealed class Villa : Entity
     public DateTime? LastBookedOnUtc { get; internal set; }
     //This has an internal setter so that we can update the value from within the domain project
 
-    public List<Amenity> Amenities { get; private set; } = new();
+    public List<Amenity> Amenities { get; private set; } = [];
 }

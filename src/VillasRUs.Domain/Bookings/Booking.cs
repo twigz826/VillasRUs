@@ -21,6 +21,10 @@ public sealed class Booking : Entity
         CreatedOnUtc = createdOnUtc;
     }
 
+    private Booking()
+    {
+    }
+
     public Guid VillaId { get; private set; }
 
     public Guid UserId { get; private set; }

@@ -1,3 +1,4 @@
+using VillasRUs.Api.Extensions;
 using VillasRUs.Application;
 using VillasRUs.Infrastructure;
 
@@ -17,9 +18,19 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.ApplyMigrations();
+
+    //app.SeedData();
 }
 
 app.UseHttpsRedirection();
+
+app.UseCustomExceptionHandlingMiddleware();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 app.MapControllers();
 
